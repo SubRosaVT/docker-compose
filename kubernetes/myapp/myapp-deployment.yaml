@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myapp-container
+          image: vtolubayev/myapp:prd
+          ports:
+            - containerPort: 8081
+          env:
+            - name: KAFKA_RESERVATION_BOOTSTRAP_SERVERS
+              value: "kafka-service:9092"

@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:pass12345@localhost:27017/messages?authSource=admin
+  kafka:
+    msg:
+      bootstrap-servers: ${KAFKA_RESERVATION_BOOTSTRAP_SERVERS:localhost:9093}
+      topic:
+        vovk: vovk
+      consumer:
+        group-id:
+          notification: notification
+          service: service
