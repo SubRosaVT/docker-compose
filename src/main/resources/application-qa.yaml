@@ -1,5 +1,12 @@
 data:
-    uri: mongodb://root:pass12345@mongodb:27017/messages?authSource=admin
+  mongodb:
+    host: mongodb
+    port: 27017
+    repositories:
+      enabled: true
+    uri: mongodb://root:pass12345@localhost:27017/messages?authSource=admin
+    database: messages
+    authentication-database: admin
 kafka:
   msg:
     bootstrap-servers: ${KAFKA_RESERVATION_BOOTSTRAP_SERVERS:kafka:9092}

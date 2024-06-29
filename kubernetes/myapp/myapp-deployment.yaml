@@ -22,3 +22,5 @@ spec:
           env:
             - name: KAFKA_RESERVATION_BOOTSTRAP_SERVERS
               value: "kafka-service:9092"
+            - name: SPRING_DATA_MONGODB_URI
+              value: "mongodb://root:pass12345@mongodb-service.default.svc.cluster.local:27017/messages?authSource=admin"

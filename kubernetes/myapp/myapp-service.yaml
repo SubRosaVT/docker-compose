@@ -10,7 +10,7 @@ spec:
     app: myapp
   ports:
     - protocol: TCP
-      port: 80F
+      port: 80
       targetPort: 8081
-      nodePort: 30081  # Change this to any value within the range 30000-32767
+      nodePort: 32000
   type: NodePort

@@ -3,8 +3,6 @@ spring:
     active: prd
   data:
     mongodb:
-      host: mongodb
-      port: 27017
       repositories:
         enabled: true
       uri: mongodb://root:pass12345@mongodb-service.default.svc.cluster.local:27017/messages?authSource=admin
@@ -19,3 +17,6 @@ spring:
         group-id:
           notification: notification
           service: service
+logging:
+  level:
+    org.springframework.boot.context.properties: DEBUG
